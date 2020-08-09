@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 
-from polls.models import Question
+from polls.models import Question, Choice
 
 
 # Create your views here.
