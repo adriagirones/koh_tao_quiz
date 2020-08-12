@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 
 
@@ -7,6 +9,12 @@ class Question(models.Model):
 
     def __str__(self):
         return self.question_text
+
+    def was_published_today(self):
+        if self.pub_date == datetime.datetime.today():
+            return True
+        else:
+            return False
 
 
 class Choice(models.Model):
